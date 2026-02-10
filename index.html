@@ -61,9 +61,10 @@
 
 <div class="card" id="content">
   <h1>💘 Will you be my Valentine? 💘</h1>
-  <p>Soch lo ache se… last chance 😜</p>
+  <p>Ek baar YES bol do… chocolate meri taraf se 🍫😜</p>
 
-  <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif">
+  <!-- Cute asking GIF -->
+  <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="cute asking">
 
   <button class="btn yes" onclick="yesClicked()">YES 💖</button>
   <button class="btn no" id="noBtn" onmouseover="moveNo()">NO 😏</button>
@@ -79,18 +80,21 @@ function moveNo() {
   btn.style.left = Math.random() * 250 + "px";
   btn.style.top = Math.random() * 250 + "px";
 
-  if (noCount === 3) alert("इतनी जल्दी NO? गुलाब वापस ले लूँ? 😆");
-  if (noCount === 6) alert("Soch lo… chocolates pending hain 🍫😜");
-  if (noCount === 9) alert("Ok ok… YES दबाओ, मैं मान जाऊँगा 😌❤️");
+  if (noCount === 3) alert("इतनी जल्दी NO? Socho phir se 😆");
+  if (noCount === 6) alert("Chocolate + hugs free hain 🍫🤗");
+  if (noCount === 9) alert("Bas karo… YES hi better option hai 😜❤️");
 }
 
 function yesClicked() {
   document.getElementById("content").innerHTML = `
-    <h1>❤️ YAYYYYY ❤️</h1>
-    <p>मुझे पता था तुम YES ही बोलोगी 😍</p>
-    <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif">
-    <p><b>Happy Valentine’s Day, my love 💕</b></p>
-    <p>You are officially stuck with me forever 😜</p>
+    <h1>🥰 YAYYYY 🥰</h1>
+    <p>Mujhe pata tha tum YES hi bologi 😍</p>
+
+    <!-- Cute celebration GIF -->
+    <img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" alt="cute love">
+
+    <p><b>Happy Valentine’s Day, my cutie 💕</b></p>
+    <p>You are my favorite human forever 😘</p>
     <p style="margin-top:15px;">— Udit ❤️</p>
   `;
 }
