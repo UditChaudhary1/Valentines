@@ -19,3 +19,82 @@
     background: white;
     padding: 35px;
     border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 380px;
+  }
+
+  h1 {
+    color: #e91e63;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  img {
+    width: 250px;
+    border-radius: 18px;
+    margin: 20px 0;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .yes {
+    background: #e91e63;
+    color: white;
+  }
+
+  .no {
+    background: #ccc;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+
+<div class="card" id="content">
+  <h1>💘 Will you be my Valentine? 💘</h1>
+  <p>Soch lo ache se… last chance 😜</p>
+
+  <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif">
+
+  <button class="btn yes" onclick="yesClicked()">YES 💖</button>
+  <button class="btn no" id="noBtn" onmouseover="moveNo()">NO 😏</button>
+</div>
+
+<script>
+let noCount = 0;
+
+function moveNo() {
+  noCount++;
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 250 + "px";
+  btn.style.top = Math.random() * 250 + "px";
+
+  if (noCount === 3) alert("इतनी जल्दी NO? गुलाब वापस ले लूँ? 😆");
+  if (noCount === 6) alert("Soch lo… chocolates pending hain 🍫😜");
+  if (noCount === 9) alert("Ok ok… YES दबाओ, मैं मान जाऊँगा 😌❤️");
+}
+
+function yesClicked() {
+  document.getElementById("content").innerHTML = `
+    <h1>❤️ YAYYYYY ❤️</h1>
+    <p>मुझे पता था तुम YES ही बोलोगी 😍</p>
+    <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif">
+    <p><b>Happy Valentine’s Day, my love 💕</b></p>
+    <p>You are officially stuck with me forever 😜</p>
+    <p style="margin-top:15px;">— Udit ❤️</p>
+  `;
+}
+</script>
+
+</body>
+</html>
